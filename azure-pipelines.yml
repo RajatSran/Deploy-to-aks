@@ -43,10 +43,7 @@ stages:
     displayName: Deploy to AKS
     pool: 
       vmImage: ubuntu-latest
-    strategy:
-      runOnce:
-        deploy:
-          steps:
+      steps:
           - task: DownloadPipelineArtifact@2
             inputs:
               buildType: 'current'
